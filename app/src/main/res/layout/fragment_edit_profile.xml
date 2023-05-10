@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.EditProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_header_block"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_user_photo"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_profile"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="2dp"
+            app:civ_circle_background_color="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_add_photo"
+            android:layout_width="63dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="76dp"
+            android:src="@drawable/ic_add_photo"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="2dp"
+            app:civ_circle_background_color="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.626"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/profile_user_photo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <EditText
+        android:id="@+id/editTextUserName"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="14dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Ім'я"
+        android:textColorHint="@color/colorGrey"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_header_block" />
+    
+    <View
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextUserName"
+        style="@style/separator" />
+
+    <EditText
+        android:id="@+id/editTextNick"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="14dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Нікнейм"
+        android:textColorHint="@color/colorGrey"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUserName" />
+
+    <View
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextNick"
+        style="@style/separator" />
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="14dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Опис"
+        android:textColorHint="@color/colorGrey"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNick" />
+
+    <View
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextDescription"
+        style="@style/separator" />
+
+
+    <EditText
+        android:id="@+id/editTextPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="14dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Номер"
+        android:textColorHint="@color/colorGrey"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescription" />
+
+    <View
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPhoneNumber"
+        style="@style/separator" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
